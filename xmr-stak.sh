@@ -7,13 +7,13 @@ update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 60 --slave /usr/bi
 apt install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev 
 apt-get install git 
 git clone "https://github.com/AltcoinCoop/xmr-stak-haven.git" 
-mkdir xmr-stak/build 
-cd xmr-stak/build 
+mkdir xmr-stak-haven/build 
+cd xmr-stak-haven/build 
 cmake -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF .. 
 make install 
 sudo sysctl -w vm.nr_hugepages=128 
 cd
 nano xmr-stak/xmrstak/donate-level.hpp 
-cd xmr-stak/build/bin 
+cd xmr-stak-haven/build/bin 
 screen
 ./xmr-stak
